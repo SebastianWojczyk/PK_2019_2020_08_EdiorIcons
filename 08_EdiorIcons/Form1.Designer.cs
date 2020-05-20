@@ -35,6 +35,9 @@
             this.textBoxIconName = new System.Windows.Forms.TextBox();
             this.numericUpDownIconSize = new System.Windows.Forms.NumericUpDown();
             this.pictureBoxIconEditor = new System.Windows.Forms.PictureBox();
+            this.buttonColor = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIconSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconEditor)).BeginInit();
             this.SuspendLayout();
@@ -107,14 +110,34 @@
             0});
             this.numericUpDownIconSize.ValueChanged += new System.EventHandler(this.numericUpDownIconSize_ValueChanged);
             // 
-            // pictureBox1
+            // pictureBoxIconEditor
             // 
-            this.pictureBoxIconEditor.Location = new System.Drawing.Point(15, 98);
-            this.pictureBoxIconEditor.Name = "pictureBox1";
+            this.pictureBoxIconEditor.Location = new System.Drawing.Point(15, 143);
+            this.pictureBoxIconEditor.Name = "pictureBoxIconEditor";
             this.pictureBoxIconEditor.Size = new System.Drawing.Size(174, 167);
             this.pictureBoxIconEditor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxIconEditor.TabIndex = 6;
             this.pictureBoxIconEditor.TabStop = false;
+            this.pictureBoxIconEditor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxIconEditor_MouseDown);
+            // 
+            // buttonColor
+            // 
+            this.buttonColor.BackColor = System.Drawing.Color.Red;
+            this.buttonColor.Location = new System.Drawing.Point(96, 94);
+            this.buttonColor.Name = "buttonColor";
+            this.buttonColor.Size = new System.Drawing.Size(120, 23);
+            this.buttonColor.TabIndex = 7;
+            this.buttonColor.UseVisualStyleBackColor = false;
+            this.buttonColor.Click += new System.EventHandler(this.buttonColor_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Kolor pióra";
             // 
             // Form1
             // 
@@ -123,6 +146,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buttonColor);
             this.Controls.Add(this.pictureBoxIconEditor);
             this.Controls.Add(this.numericUpDownIconSize);
             this.Controls.Add(this.textBoxIconName);
@@ -148,6 +173,9 @@
         private System.Windows.Forms.TextBox textBoxIconName;
         private System.Windows.Forms.NumericUpDown numericUpDownIconSize;
         private System.Windows.Forms.PictureBox pictureBoxIconEditor;
+        private System.Windows.Forms.Button buttonColor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }
 
