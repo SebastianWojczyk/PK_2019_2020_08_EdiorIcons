@@ -61,10 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabazeIcons.designer.cs">
+    <Compile Include="DatabaseIcons.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabazeIcons.dbml</DependentUpon>
+      <DependentUpon>DatabaseIcons.dbml</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -86,13 +86,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DatabazeIcons.dbml">
+    <None Include="DatabaseIcons.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DatabazeIcons.designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseIcons.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DatabazeIcons.dbml.layout">
-      <DependentUpon>DatabazeIcons.dbml</DependentUpon>
+    <None Include="DatabaseIcons.dbml.layout">
+      <DependentUpon>DatabaseIcons.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

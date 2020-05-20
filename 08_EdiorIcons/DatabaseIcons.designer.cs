@@ -23,7 +23,7 @@ namespace _08_EdiorIcons
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DatabaseIcons")]
-	public partial class DatabazeIconsDataContext : System.Data.Linq.DataContext
+	public partial class DatabaseIconsDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -38,31 +38,31 @@ namespace _08_EdiorIcons
     partial void DeleteIconPoint(IconPoint instance);
     #endregion
 		
-		public DatabazeIconsDataContext() : 
+		public DatabaseIconsDataContext() : 
 				base(global::_08_EdiorIcons.Properties.Settings.Default.DatabaseIconsConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DatabazeIconsDataContext(string connection) : 
+		public DatabaseIconsDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DatabazeIconsDataContext(System.Data.IDbConnection connection) : 
+		public DatabaseIconsDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DatabazeIconsDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DatabaseIconsDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DatabazeIconsDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DatabaseIconsDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
