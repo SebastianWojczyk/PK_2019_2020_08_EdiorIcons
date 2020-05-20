@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,11 @@ using System.Windows.Forms;
 
 namespace _08_EdiorIcons
 {
-    public partial class Form1 : Form
+    public partial class FormMainEditor : Form
     {
         const int FieldSize = 20;
         DatabaseIconsDataContext DC = new DatabaseIconsDataContext();
-        public Form1()
+        public FormMainEditor()
         {
             InitializeComponent();
 
@@ -127,6 +128,44 @@ namespace _08_EdiorIcons
                 }
                 DC.SubmitChanges();
                 LoadIconList(selectedIcon);
+            }
+        }
+
+        private void nowaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Icon newIcon = new Icon();
+            newIcon.Name = "Nowa";
+            newIcon.Size = 10;
+
+            DC.Icons.InsertOnSubmit(newIcon);
+            DC.SubmitChanges();
+            LoadIconList(newIcon);
+        }
+
+        private void eksportujToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (comboBoxIconList.SelectedItem != null)
+            {
+                Icon selectedIcon = comboBoxIconList.SelectedItem as Icon;
+
+                SaveFileDialog dial = new SaveFileDialog();
+                dial.Filter = "Ikony|*.ico";
+                if (dial.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap ico = new Bitmap(selectedIcon.Size, selectedIcon.Size);
+                    Graphics gi = Graphics.FromImage(ico);
+
+                    foreach (IconPoint ip in selectedIcon.IconPoints)
+                    {
+                        gi.FillRectangle(new SolidBrush(Color.FromArgb(ip.Color)),
+                                        ip.X,
+                                        ip.Y,
+                                        1,
+                                        1);
+                    }
+
+                    ico.Save(dial.FileName, ImageFormat.Icon);
+                }
             }
         }
     }

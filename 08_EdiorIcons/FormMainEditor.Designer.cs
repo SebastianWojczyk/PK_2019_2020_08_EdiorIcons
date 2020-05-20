@@ -1,6 +1,6 @@
 ﻿namespace _08_EdiorIcons
 {
-    partial class Form1
+    partial class FormMainEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -38,15 +38,20 @@
             this.buttonColor = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ikonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nowaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eksportujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIconSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconEditor)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxIconList
             // 
             this.comboBoxIconList.DisplayMember = "Name";
             this.comboBoxIconList.FormattingEnabled = true;
-            this.comboBoxIconList.Location = new System.Drawing.Point(96, 12);
+            this.comboBoxIconList.Location = new System.Drawing.Point(96, 33);
             this.comboBoxIconList.Name = "comboBoxIconList";
             this.comboBoxIconList.Size = new System.Drawing.Size(121, 21);
             this.comboBoxIconList.TabIndex = 0;
@@ -55,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 1;
@@ -64,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 43);
+            this.label2.Location = new System.Drawing.Point(12, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -73,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 69);
+            this.label3.Location = new System.Drawing.Point(12, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 3;
@@ -81,7 +86,7 @@
             // 
             // textBoxIconName
             // 
-            this.textBoxIconName.Location = new System.Drawing.Point(96, 40);
+            this.textBoxIconName.Location = new System.Drawing.Point(96, 61);
             this.textBoxIconName.Name = "textBoxIconName";
             this.textBoxIconName.Size = new System.Drawing.Size(121, 20);
             this.textBoxIconName.TabIndex = 4;
@@ -89,7 +94,7 @@
             // 
             // numericUpDownIconSize
             // 
-            this.numericUpDownIconSize.Location = new System.Drawing.Point(96, 67);
+            this.numericUpDownIconSize.Location = new System.Drawing.Point(96, 88);
             this.numericUpDownIconSize.Maximum = new decimal(new int[] {
             50,
             0,
@@ -112,7 +117,7 @@
             // 
             // pictureBoxIconEditor
             // 
-            this.pictureBoxIconEditor.Location = new System.Drawing.Point(15, 143);
+            this.pictureBoxIconEditor.Location = new System.Drawing.Point(15, 164);
             this.pictureBoxIconEditor.Name = "pictureBoxIconEditor";
             this.pictureBoxIconEditor.Size = new System.Drawing.Size(174, 167);
             this.pictureBoxIconEditor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -123,7 +128,7 @@
             // buttonColor
             // 
             this.buttonColor.BackColor = System.Drawing.Color.Red;
-            this.buttonColor.Location = new System.Drawing.Point(96, 94);
+            this.buttonColor.Location = new System.Drawing.Point(96, 115);
             this.buttonColor.Name = "buttonColor";
             this.buttonColor.Size = new System.Drawing.Size(120, 23);
             this.buttonColor.TabIndex = 7;
@@ -133,11 +138,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 99);
+            this.label4.Location = new System.Drawing.Point(12, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Kolor pióra";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ikonaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ikonaToolStripMenuItem
+            // 
+            this.ikonaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nowaToolStripMenuItem,
+            this.eksportujToolStripMenuItem});
+            this.ikonaToolStripMenuItem.Name = "ikonaToolStripMenuItem";
+            this.ikonaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.ikonaToolStripMenuItem.Text = "Ikona";
+            // 
+            // nowaToolStripMenuItem
+            // 
+            this.nowaToolStripMenuItem.Name = "nowaToolStripMenuItem";
+            this.nowaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nowaToolStripMenuItem.Text = "Nowa";
+            this.nowaToolStripMenuItem.Click += new System.EventHandler(this.nowaToolStripMenuItem_Click);
+            // 
+            // eksportujToolStripMenuItem
+            // 
+            this.eksportujToolStripMenuItem.Name = "eksportujToolStripMenuItem";
+            this.eksportujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eksportujToolStripMenuItem.Text = "Eksportuj";
+            this.eksportujToolStripMenuItem.Click += new System.EventHandler(this.eksportujToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -155,10 +193,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxIconList);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIconSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconEditor)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +218,10 @@
         private System.Windows.Forms.Button buttonColor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ikonaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nowaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eksportujToolStripMenuItem;
     }
 }
 
