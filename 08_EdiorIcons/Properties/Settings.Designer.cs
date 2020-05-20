@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _08_EdiorIcons.Properties {
+namespace _08_EditorIcons.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

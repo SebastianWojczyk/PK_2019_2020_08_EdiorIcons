@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _08_EdiorIcons
+namespace _08_EditorIcons
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -39,7 +39,7 @@ namespace _08_EdiorIcons
     #endregion
 		
 		public DatabaseIconsDataContext() : 
-				base(global::_08_EdiorIcons.Properties.Settings.Default.DatabaseIconsConnectionString, mappingSource)
+				base(global::_08_EditorIcons.Properties.Settings.Default.DatabaseIconsConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

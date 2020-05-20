@@ -1,4 +1,4 @@
-﻿namespace _08_EdiorIcons
+﻿namespace _08_EditorIcons
 {
     partial class FormMainEditor
     {
@@ -166,18 +166,18 @@
             // nowaToolStripMenuItem
             // 
             this.nowaToolStripMenuItem.Name = "nowaToolStripMenuItem";
-            this.nowaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nowaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.nowaToolStripMenuItem.Text = "Nowa";
             this.nowaToolStripMenuItem.Click += new System.EventHandler(this.nowaToolStripMenuItem_Click);
             // 
             // eksportujToolStripMenuItem
             // 
             this.eksportujToolStripMenuItem.Name = "eksportujToolStripMenuItem";
-            this.eksportujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eksportujToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.eksportujToolStripMenuItem.Text = "Eksportuj";
             this.eksportujToolStripMenuItem.Click += new System.EventHandler(this.eksportujToolStripMenuItem_Click);
             // 
-            // Form1
+            // FormMainEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,8 +195,8 @@
             this.Controls.Add(this.comboBoxIconList);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormMainEditor";
+            this.Text = "Editor \"Icons\"";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIconSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconEditor)).EndInit();
             this.menuStrip1.ResumeLayout(false);

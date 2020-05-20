@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DatabaseIcons" Class="DatabazeIconsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseIcons.mdf;Integrated Security=True" SettingsObjectName="_08_EdiorIcons.Properties.Settings" SettingsPropertyName="DatabaseIconsConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseIcons.mdf;Integrated Security=True" SettingsObjectName="_08_EditorIcons.Properties.Settings" SettingsPropertyName="DatabaseIconsConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Icon" Member="Icons">
     <Type Name="Icon">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

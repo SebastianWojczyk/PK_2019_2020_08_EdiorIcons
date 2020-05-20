@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _08_EdiorIcons
+namespace _08_EditorIcons
 {
     public partial class FormMainEditor : Form
     {
@@ -26,7 +26,7 @@ namespace _08_EdiorIcons
         {
             comboBoxIconList.Items.Clear();
             comboBoxIconList.Items.AddRange(DC.Icons.ToArray());
-            if(selectedIcon != null)
+            if (selectedIcon != null)
             {
                 comboBoxIconList.SelectedItem = selectedIcon;
             }
@@ -34,7 +34,7 @@ namespace _08_EdiorIcons
 
         private void comboBoxIconList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxIconList.SelectedItem != null)
+            if (comboBoxIconList.SelectedItem != null)
             {
                 Icon selectedIcon = comboBoxIconList.SelectedItem as Icon;
                 textBoxIconName.Text = selectedIcon.Name;
@@ -48,24 +48,24 @@ namespace _08_EdiorIcons
             if (comboBoxIconList.SelectedItem != null)
             {
                 Icon selectedIcon = comboBoxIconList.SelectedItem as Icon;
-                
+
                 pictureBoxIconEditor.Image = new Bitmap(selectedIcon.Size * FieldSize, selectedIcon.Size * FieldSize);
                 Graphics g = Graphics.FromImage(pictureBoxIconEditor.Image);
 
-                foreach(IconPoint ip in selectedIcon.IconPoints)
+                foreach (IconPoint ip in selectedIcon.IconPoints)
                 {
                     g.FillRectangle(new SolidBrush(Color.FromArgb(ip.Color)),
                                     ip.X * FieldSize,
                                     ip.Y * FieldSize,
-                                    FieldSize - 1, 
+                                    FieldSize - 1,
                                     FieldSize - 1);
                 }
 
-                for (int x = 0; x <selectedIcon.Size; x++)
+                for (int x = 0; x < selectedIcon.Size; x++)
                 {
                     for (int y = 0; y < selectedIcon.Size; y++)
                     {
-                        g.DrawRectangle(new Pen(Color.Gray), x * FieldSize, y * FieldSize, FieldSize-1, FieldSize-1);
+                        g.DrawRectangle(new Pen(Color.Gray), x * FieldSize, y * FieldSize, FieldSize - 1, FieldSize - 1);
                     }
                 }
                 pictureBoxIconEditor.Refresh();
@@ -88,7 +88,7 @@ namespace _08_EdiorIcons
             if (comboBoxIconList.SelectedItem != null)
             {
                 Icon selectedIcon = comboBoxIconList.SelectedItem as Icon;
-                selectedIcon.Size = (int) numericUpDownIconSize.Value;
+                selectedIcon.Size = (int)numericUpDownIconSize.Value;
                 DC.SubmitChanges();
                 LoadIconList(selectedIcon);
             }
@@ -97,7 +97,7 @@ namespace _08_EdiorIcons
         private void buttonColor_Click(object sender, EventArgs e)
         {
             colorDialog.Color = buttonColor.BackColor;
-            if(colorDialog.ShowDialog()==DialogResult.OK)
+            if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 buttonColor.BackColor = colorDialog.Color;
             }

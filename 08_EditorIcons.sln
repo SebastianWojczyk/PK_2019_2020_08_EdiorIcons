@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_EdiorIcons", "08_EdiorIcons\08_EdiorIcons.csproj", "{F3601F8C-BF01-4A0A-B00E-7CB1139B8A46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_EditorIcons", "08_EdiorIcons\08_EditorIcons.csproj", "{F3601F8C-BF01-4A0A-B00E-7CB1139B8A46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
